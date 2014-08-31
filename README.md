@@ -1,7 +1,9 @@
 Gneiss
 ======
 
-Collects metrics in graphite's plain text protocol, inserts them into a Cassandra backend, and makes them queriable through a web interface.
+Collects metrics in graphite's plain text protocol, inserts them into a storage backend, and makes them queriable through a web interface.
+
+The choice of a storage backend should depend on the available drivers, and the program logic should be untied of the underlying implementation. As of now Cassandra and Redis are planned, with prioritization on Cassandra.
 
 Aims to be fully compatible with your standard carbon cache configuration, including different storage aggregation rollups and methods per metric name.
 
@@ -24,5 +26,5 @@ This software is provided “as is”, without warranty of any kind, express or 
 License
 -------
 
-MIT, for the moment. Highly probable subjection to change.
+MIT, for the moment. Highly probable subsceptibility to change.
 
